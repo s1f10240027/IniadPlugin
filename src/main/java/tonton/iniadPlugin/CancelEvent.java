@@ -8,15 +8,25 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
-import org.bukkit.event.hanging.HangingBreakByEntityEvent;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.entity.ItemFrame;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class CancelEvent implements Listener {
+    @EventHandler
+    public void onItemFrameInteract(PlayerInteractEntityEvent event) {
+        if (event.getRightClicked() instanceof ItemFrame) {
+            Player player = event.getPlayer();
+            if (player.getGameMode() != GameMode.CREATIVE) {
+                event.setCancelled(true);
+            }
+        }
+    }
 
     @EventHandler
-    public void onHangingBreak(HangingBreakByEntityEvent event) {
+    public void onItemFrameBreak(EntityDamageByEntityEvent event) {
         if (event.getEntity() instanceof ItemFrame) {
             Player player = (Player) event.getEntity();
             if (player.getGameMode() != GameMode.CREATIVE) {
