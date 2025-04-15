@@ -28,9 +28,10 @@ public class CancelEvent implements Listener {
     @EventHandler
     public void onItemFrameBreak(EntityDamageByEntityEvent event) {
         if (event.getEntity() instanceof ItemFrame) {
-            Player player = (Player) event.getEntity();
-            if (player.getGameMode() != GameMode.CREATIVE) {
-                event.setCancelled(true);
+            if (event.getDamager() instanceof Player player) {
+                if (player.getGameMode() != GameMode.CREATIVE) {
+                    event.setCancelled(true);
+                }
             }
         }
     }
