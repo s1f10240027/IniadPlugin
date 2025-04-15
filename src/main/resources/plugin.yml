@@ -1,0 +1,6 @@
+name: IniadPlugin
+version: '1.0'
+main: tonton.iniadPlugin.Main
+api-version: '1.20'
+authors: [ tonton ]
+description: The Plugin for INIAD map 
