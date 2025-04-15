@@ -6,13 +6,13 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("[IniadPlugin] プラグインが有効になりました。");
+        getLogger().info("プラグインが有効になりました。");
 
         getServer().getPluginManager().registerEvents(new CancelEvent(), this);
     }
 
     @Override
     public void onDisable() {
-        System.out.println("[IniadPlugin] プラグインが無効になりました。");
+        getLogger().info("プラグインが無効になりました。");
     }
 }
