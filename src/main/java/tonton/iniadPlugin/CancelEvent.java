@@ -61,7 +61,7 @@ public class CancelEvent implements Listener {
                     event.setCancelled(true);
                     Player player = event.getPlayer();
                     player.sendMessage("§cICカードを持った状態でクリックしてください。");
-                    player.playSound(player.getLocation(), Sound.BLOCK_IRON_TRAPDOOR_CLOSE, 1.0f, 1.0f);
+                    player.playSound(player.getLocation(), Sound.BLOCK_CHEST_LOCKED, 1.0f, 1.0f);
                 }
             }
         }
