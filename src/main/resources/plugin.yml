@@ -3,4 +3,15 @@ version: '1.0'
 main: tonton.iniadPlugin.Main
 api-version: '1.20'
 authors: [ tonton ]
-description: The Plugin for INIAD map 
+description: The Plugin for INIAD map
+
+commands:
+  InvisibleFrame:
+    description: Give an invisible item frame
+    aliases: [invframe]
+    permission: IniadCommand.use
+    permission-message: §cこのコマンドを実行するための権限がありません。
+  getNBT:
+    description: Get NBT of player's tool
+    permission: IniadCommand.use
+    permission-message: §cこのコマンドを実行するための権限がありません。
