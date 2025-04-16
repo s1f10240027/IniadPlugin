@@ -11,7 +11,8 @@ commands:
     aliases: [invframe]
     permission: IniadCommand.use
     permission-message: §cこのコマンドを実行するための権限がありません。
-  getNBT:
-    description: Get NBT of player's tool
+  gm:
+    description: Change your gamemode
     permission: IniadCommand.use
     permission-message: §cこのコマンドを実行するための権限がありません。
+    Usage: /gm [<0/1/2/3>] or /gm [<s/c/a/sp>]
