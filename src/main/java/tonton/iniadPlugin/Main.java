@@ -14,6 +14,7 @@ public final class Main extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new CancelEvent(), this);
         getServer().getPluginManager().registerEvents(new totyo(), this);
+        getServer().getPluginManager().registerEvents(new sitdown(this), this);
     }
 
     @Override
